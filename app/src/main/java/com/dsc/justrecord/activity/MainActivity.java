@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
     private View viewStat;
     private List<View> viewList;
 
+
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
