@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">JustRecord</string>
+    <string name="title_earn">收入</string>
+    <string name="title_stat">统计</string>
+    <string name="title_pay">支出</string>
+    <string name="action_settings">设置</string>
+    <string name="action_about">关于</string>
+    <string name="earn_title">记一笔收入</string>
+    <string name="pay_title">记一笔支出</string>
+    <string name="stat_title">统计信息</string>
+</resources>
+
