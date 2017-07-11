@@ -17,7 +17,7 @@ import com.dsc.justrecord.util.ToastUtil;
 
 public class MainActivity extends AppCompatActivity {
 
-    private EarnFragment mEarmFragment;
+    private EarnFragment mEarnFragment;
     private PayFragment mPayFragment;
     private StatFragment mStatFragment;
 
@@ -29,10 +29,10 @@ public class MainActivity extends AppCompatActivity {
             FragmentTransaction transaction = fm.beginTransaction();
             switch (item.getItemId()) {
                 case R.id.navigation_home:
-                    if (mEarmFragment == null) {
-                        mEarmFragment = EarnFragment.newInstance();
+                    if (mEarnFragment == null) {
+                        mEarnFragment = EarnFragment.newInstance();
                     }
-                    transaction.replace(R.id.content, mEarmFragment);
+                    transaction.replace(R.id.content, mEarnFragment);
                     transaction.commit();
                     return true;
                 case R.id.navigation_dashboard:
@@ -93,8 +93,8 @@ public class MainActivity extends AppCompatActivity {
     private void setDefaultFragment() {
         FragmentManager fm = getFragmentManager();
         FragmentTransaction transaction = fm.beginTransaction();
-        mEarmFragment = EarnFragment.newInstance();
-        transaction.replace(R.id.content, mEarmFragment);
+        mEarnFragment = EarnFragment.newInstance();
+        transaction.replace(R.id.content, mEarnFragment);
         transaction.commit();
     }
 }

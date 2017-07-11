@@ -7,6 +7,7 @@
     <string name="action_about">关于</string>
     <string name="earn_title">记一笔收入</string>
     <string name="pay_title">记一笔支出</string>
+    <string name="pay_chooseDate">日期</string>
     <string name="stat_title">统计信息</string>
 </resources>
 
