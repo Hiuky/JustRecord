@@ -10,12 +10,12 @@ import android.widget.Toast;
 public class ToastUtil {
     private static Toast toast;
 
-    public static void showToast(Context context, CharSequence charSequence) {
+    public static void showToast(Context context, String msg) {
         if (toast != null) {
-            toast.setText(charSequence);
+            toast.setText(msg);
             toast.show();
         } else {
-            toast = Toast.makeText(context, charSequence, Toast.LENGTH_SHORT);
+            toast = Toast.makeText(context, msg, Toast.LENGTH_SHORT);
             toast.show();
         }
     }
