@@ -2,6 +2,8 @@ package com.dsc.justrecord.activity;
 
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -61,6 +63,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //isFirstOpen();
         setContentView(R.layout.activity_main);
         //底部导航按钮
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
@@ -68,6 +71,25 @@ public class MainActivity extends AppCompatActivity {
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
         setDefaultFragment();
+    }
+
+    private void isFirstOpen() {
+        SharedPreferences shared = getSharedPreferences("is", MODE_PRIVATE);
+        boolean isFirstOpen = shared.getBoolean("isfer", true);
+        SharedPreferences.Editor editor = shared.edit();
+        if (isFirstOpen) {
+            //第一次进入跳转
+            Intent in = new Intent(MainActivity.this, InitActivity.class);//problem ?
+            startActivity(in);
+            finish();
+            editor.putBoolean("isfer", false);
+            editor.commit();
+        } else {
+            //第二次进入跳转
+            Intent in = new Intent(MainActivity.this, MainActivity.class);
+            startActivity(in);
+            finish();
+        }
     }
 
     @Override
