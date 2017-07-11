@@ -15,6 +15,7 @@
         android:textSize="@dimen/global_font_size"/>
 
 
+    <!--日期-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -37,6 +38,7 @@
             android:text="@string/pay_chooseDate"/>
     </LinearLayout>
 
+    <!--备注-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -57,10 +59,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:inputType="textPersonName"
-            android:text="memo"/>
+            android:hint="备注"
+            android:inputType="textPersonName"/>
     </LinearLayout>
 
+    <!--成员-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -81,10 +84,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:inputType="textPersonName"
-            android:text="memo"/>
+            android:hint="成员"
+            android:inputType="textPersonName"/>
     </LinearLayout>
 
+    <!--账户-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -100,20 +104,50 @@
             android:text="账户"
             android:textSize="@dimen/global_font_size"/>
 
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <!--金额-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/small_margin"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:text="金额"
+            android:textSize="@dimen/global_font_size"/>
+
         <EditText
-            android:id="@+id/editText2"
+            android:id="@+id/editText3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:inputType="textPersonName"
-            android:text="memo"/>
+            android:ems="10"
+            android:hint="金额"
+            android:inputType="numberDecimal"/>
+
+
     </LinearLayout>
+
 
     <Button
         android:id="@+id/button"
-        android:layout_width="match_parent"
+        android:layout_gravity="right"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dip"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
         android:text="保存"/>
 
 
