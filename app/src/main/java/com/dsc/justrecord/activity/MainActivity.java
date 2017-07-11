@@ -30,21 +30,21 @@ public class MainActivity extends AppCompatActivity {
             switch (item.getItemId()) {
                 case R.id.navigation_home:
                     if (mEarmFragment == null) {
-                        mEarmFragment = EarnFragment.newInstance("hey");
+                        mEarmFragment = EarnFragment.newInstance();
                     }
                     transaction.replace(R.id.content, mEarmFragment);
                     transaction.commit();
                     return true;
                 case R.id.navigation_dashboard:
                     if (mStatFragment == null) {
-                        mStatFragment = StatFragment.newInstance("hey");
+                        mStatFragment = StatFragment.newInstance();
                     }
                     transaction.replace(R.id.content, mStatFragment);
                     transaction.commit();
                     return true;
                 case R.id.navigation_notifications:
                     if (mPayFragment == null) {
-                        mPayFragment = PayFragment.newInstance("hey");
+                        mPayFragment = PayFragment.newInstance();
                     }
                     transaction.replace(R.id.content, mPayFragment);
                     transaction.commit();
@@ -93,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
     private void setDefaultFragment() {
         FragmentManager fm = getFragmentManager();
         FragmentTransaction transaction = fm.beginTransaction();
-        mEarmFragment = EarnFragment.newInstance("位置");
+        mEarmFragment = EarnFragment.newInstance();
         transaction.replace(R.id.content, mEarmFragment);
         transaction.commit();
     }

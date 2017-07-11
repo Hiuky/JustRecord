@@ -15,11 +15,8 @@ import com.dsc.justrecord.R;
 
 public class EarnFragment extends Fragment {
 
-    public static EarnFragment newInstance(String param1) {
+    public static EarnFragment newInstance() {
         EarnFragment earnFragment = new EarnFragment();
-        Bundle args = new Bundle();
-        args.putString("args1", param1);
-        earnFragment.setArguments(args);
         return earnFragment;
     }
 

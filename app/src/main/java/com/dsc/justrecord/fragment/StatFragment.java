@@ -16,11 +16,11 @@ import com.dsc.justrecord.R;
 public class StatFragment extends Fragment {
 
 
-    public static StatFragment newInstance(String param1) {
+    public static StatFragment newInstance() {
         StatFragment statFragment = new StatFragment();
-        Bundle args = new Bundle();
-        args.putString("args1", param1);
-        statFragment.setArguments(args);
+//        Bundle args = new Bundle();
+//        args.putString("args1", param1);
+//        statFragment.setArguments(args);
         return statFragment;
     }
 
