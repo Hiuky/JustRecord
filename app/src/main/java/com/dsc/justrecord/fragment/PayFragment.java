@@ -9,8 +9,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.TextView;
 
 import com.dsc.justrecord.R;
+
+import java.util.Calendar;
 
 
 /**
@@ -20,6 +23,7 @@ import com.dsc.justrecord.R;
 public class PayFragment extends Fragment {
 
     private Button btnSetDate;
+    private TextView textViewPayDate;
 
     public PayFragment() {
     }
@@ -46,15 +50,22 @@ public class PayFragment extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         btnSetDate = (Button) getActivity().findViewById(R.id.buttonSetDate);
+        textViewPayDate = (TextView) getActivity().findViewById(R.id.textViewPayDate);
+        Calendar calendar = Calendar.getInstance();
+        final int year = calendar.get(Calendar.YEAR);
+        final int month = calendar.get(Calendar.MONTH) + 1;
+        final int day = calendar.get(Calendar.DAY_OF_MONTH);
+        textViewPayDate.setText(year + "年" + month + "月" + day + "日");
         btnSetDate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 new DatePickerDialog(getActivity(), new DatePickerDialog.OnDateSetListener() {
                     @Override
                     public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-                       //日期选定后的事件
+                        //日期选定后的事件
+                        textViewPayDate.setText(year + " " + (month + 1) + " " + dayOfMonth);
                     }
-                }, 2010, 1, 1).show();
+                }, year, month-1, day).show();
             }
         });
     }
